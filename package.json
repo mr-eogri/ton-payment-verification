@@ -1,0 +1,53 @@
+{
+  "name": "ton-payment-verification",
+  "version": "1.0.0",
+  "description": "A comprehensive NPM library for verifying TON blockchain payments with multiple validation options, full speed optimization, and support for both server and client-side operations.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "build": "tsc && npm run build:esm",
+    "build:esm": "tsc --module esnext --outDir dist --declaration",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "ton",
+    "blockchain",
+    "payment",
+    "verification",
+    "crypto",
+    "validation",
+    "smart-contract"
+  ],
+  "author": "mr-eogri",
+  "license": "MIT",
+  "dependencies": {
+    "@ton/core": "^0.52.0",
+    "@ton/ton": "^13.6.0",
+    "@ton/crypto": "^3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "eslint": "^8.52.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mr-eogri/ton-payment-verification.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mr-eogri/ton-payment-verification/issues"
+  },
+  "homepage": "https://github.com/mr-eogri/ton-payment-verification#readme"
+}
